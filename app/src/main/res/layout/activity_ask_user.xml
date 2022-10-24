@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AskUserActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="218dp"
+        android:layout_height="201dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="470dp"
+        app:srcCompat="@drawable/vbitlogo" />
+
+    <Button
+        android:id="@+id/student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/coordinator"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="-72dp"
+        android:backgroundTint="@color/grey"
+        android:gravity="center"
+        android:text="@string/student"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/coordinator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/welcometitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="-130dp"
+        android:backgroundTint="@color/grey"
+        android:gravity="center"
+        android:text="@string/coordinator"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp">
+
+    </Button>
+
+    <TextView
+        android:id="@+id/welcometitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="-58dp"
+        android:gravity="center"
+        android:text="Welcome to Vbit Navigator"
+        android:textAlignment="center"
+        android:textColor="@color/material_dynamic_primary20"
+        android:textSize="26sp"
+        android:textStyle="italic" />
+
+
+</RelativeLayout>

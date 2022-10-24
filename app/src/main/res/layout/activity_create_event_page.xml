@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".coordinator.CreateEventPage"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="ADD EVENT"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="36dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+
+
+
+    <TextView
+        android:id="@+id/eventnametv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="57dp"
+        android:text="EVENT NAME: "
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="normal"
+
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/EventnameET"
+        android:layout_width="347dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/eventnametv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="45dp"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/eventdatetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EventnameET"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="EVENT DATE: "
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="normal"
+
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/EventdateET"
+        android:layout_width="340dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/eventdatetv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="45dp"
+
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/eventtimetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EventdateET"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="EVENT TIME: "
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="normal"
+
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/EventtimeET"
+        android:layout_width="338dp"
+        android:layout_height="69dp"
+        android:layout_below="@+id/eventtimetv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="45dp"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/eventvenuetv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EventtimeET"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="EVENT VENUE: "
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="normal"
+
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/EventvenueET"
+        android:layout_width="341dp"
+        android:layout_height="68dp"
+        android:layout_below="@+id/eventvenuetv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="45dp"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/ADD"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EventvenueET"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="180dp"
+        android:text="ADD"
+        android:textSize="18dp"
+        android:textStyle="normal">
+
+    </Button>
+
+
+</LinearLayout>
+
+

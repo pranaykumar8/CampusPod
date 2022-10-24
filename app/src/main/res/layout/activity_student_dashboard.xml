@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".student.StudentDashboard"
+    android:background="@drawable/rectangle">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="413dp"
+        android:layout_height="145dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+
+        tools:layout_editor_absoluteY="2dp">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="97dp"
+            android:layout_height="91dp"
+            android:src="@drawable/ellipse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="19P61A1235"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.654"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="228dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="51dp"
+            android:text="Govardhana Vivek"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.817"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.261">
+
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="381dp"
+        android:layout_height="598dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/rectangle2"
+        android:backgroundTint="#0E1D2C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout">
+
+        <Button
+            android:id="@+id/Events"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#F1DF66"
+            android:fontFamily="monospace"
+            android:text="EVENTS"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/Account"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#B7CADB"
+            android:fontFamily="monospace"
+            android:text="ACCOUNT"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/Attendence"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_below="@id/Events"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="#B7CADB"
+            android:fontFamily="monospace"
+            android:text="ATTENDENCE"
+            android:textColor="#000"
+            android:textSize="17.5dp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/Navigate"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_below="@id/Account"
+            android:layout_marginLeft="200dp"
+            android:backgroundTint="#F1DF66"
+            android:fontFamily="monospace"
+            android:text="NAVIGATE"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/Notification"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_below="@id/Attendence"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="-1dp"
+            android:backgroundTint="#F1DF66"
+            android:fontFamily="monospace"
+            android:text="Notifications"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/Logout"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_below="@id/Navigate"
+            android:layout_marginLeft="200dp"
+            android:backgroundTint="#B7CADB"
+            android:fontFamily="monospace"
+            android:text="LOGOUT"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold">
+
+        </Button>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

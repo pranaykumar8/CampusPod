@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".coordinator.CoordinatorDashboard"
+    android:background="@drawable/rectangle">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="413dp"
+        android:layout_height="145dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+
+        tools:layout_editor_absoluteY="2dp">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="97dp"
+            android:layout_height="91dp"
+            android:src="@drawable/ellipse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="1xxP61A1xxx"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.654"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="228dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="51dp"
+            android:text="IT HOD"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.817"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.261">
+
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="381dp"
+        android:layout_height="598dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rectangle2"
+        android:backgroundTint="#0E1D2C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout">
+
+        <Button
+            android:id="@+id/neweventbtn"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#F1DF66"
+            android:fontFamily="monospace"
+            android:text="Create Event"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/eventsbtn"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#B7CADB"
+            android:fontFamily="monospace"
+            android:text="Events"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/AccountBtn"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_below="@id/neweventbtn"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="#B7CADB"
+            android:fontFamily="monospace"
+            android:text="Account"
+            android:textColor="#000"
+            android:textSize="17.5dp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/NavigateBtn"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_below="@id/eventsbtn"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="1dp"
+            android:backgroundTint="#F1DF66"
+            android:fontFamily="monospace"
+            android:text="NAVIGATE"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/ThemeBtn"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_below="@id/AccountBtn"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="#F1DF66"
+            android:fontFamily="monospace"
+            android:text="APP THEME"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <Button
+            android:id="@+id/LogoutBtn"
+            android:layout_width="160dp"
+            android:layout_height="191.6dp"
+            android:layout_below="@id/NavigateBtn"
+            android:layout_marginLeft="200dp"
+
+            android:backgroundTint="#B7CADB"
+            android:fontFamily="monospace"
+            android:text="LOGOUT"
+            android:textColor="#000"
+            android:textSize="19dp"
+            android:textStyle="bold">
+
+        </Button>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
