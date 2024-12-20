@@ -12,6 +12,7 @@ public class user {
             this.collegeid = collegeid;
             this.email = email;
             this.password = password;
+
     }
 }
 

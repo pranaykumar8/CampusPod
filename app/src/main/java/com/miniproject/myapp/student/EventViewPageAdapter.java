@@ -1,8 +1,11 @@
 package com.miniproject.myapp.student;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView.Adapter;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.miniproject.myapp.MainActivity;
+import com.miniproject.myapp.Navigation.MapsActivity;
 import com.miniproject.myapp.R;
 
 
@@ -40,6 +45,15 @@ public class EventViewPageAdapter extends FirebaseRecyclerAdapter<EventPageViewD
         holder.Sdate.setText(model.getEventdate());
         holder.Stime.setText(model.getEventtime());
         holder.Svenue.setText(model.getEventvenue());
+        holder.Snavigate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String venue = holder.Svenue.getText().toString();
+                Intent intent = new Intent(v.getContext(), MapsActivity.class);
+                intent.putExtra("Venue",venue);
+                v.getContext().startActivity(intent);
+            }
+        });
 
 
 
@@ -50,6 +64,7 @@ public class EventViewPageAdapter extends FirebaseRecyclerAdapter<EventPageViewD
     public static class MyViewholder extends RecyclerView.ViewHolder {
 
         TextView Stitle, Sdate, Stime, Svenue;
+        Button Snavigate;
 
 
         public MyViewholder(@NonNull View itemView) {
@@ -58,6 +73,8 @@ public class EventViewPageAdapter extends FirebaseRecyclerAdapter<EventPageViewD
             Sdate = (TextView)itemView.findViewById(R.id.sdate);
             Stime = (TextView) itemView.findViewById(R.id.stime);
             Svenue = (TextView) itemView.findViewById(R.id.svenue);
+            Snavigate = (Button) itemView.findViewById(R.id.navigate);
+
 
 
         }

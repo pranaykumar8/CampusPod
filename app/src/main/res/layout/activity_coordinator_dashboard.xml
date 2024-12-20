@@ -5,168 +5,246 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".coordinator.CoordinatorDashboard"
-    android:background="@drawable/rectangle">
+    android:background="@drawable/dashboardbg">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layout"
-        android:layout_width="413dp"
-        android:layout_height="145dp"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-
-        tools:layout_editor_absoluteY="2dp">
-
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="353dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/bordered"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="97dp"
-            android:layout_height="91dp"
-            android:src="@drawable/ellipse"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.142"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.507">
+            android:id="@+id/profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/accounts">
 
         </ImageView>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="1xxP61A1xxx"
-            android:textColor="@color/white"
-            android:textSize="28dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.654"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView">
+            android:id="@+id/Name"
+            android:layout_width="224dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="118dp"
+            android:layout_marginTop="13dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="Govardhana Vivek"
+            android:textColor="#FF4081"
+            android:textSize="20dp"
+            android:textStyle="bold">
 
         </TextView>
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="228dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="51dp"
-            android:text="IT HOD"
-            android:textColor="@color/white"
-            android:textSize="28dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.817"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.261">
+            android:id="@+id/ID"
+            android:layout_width="220dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="119dp"
+            android:layout_marginTop="67dp"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:text="19p61a1235"
+            android:textColor="#18071C"
+            android:textSize="18dp"
+            android:textStyle="bold">
 
         </TextView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="381dp"
-        android:layout_height="598dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/rectangle2"
-        android:backgroundTint="#0E1D2C"
+        android:id="@+id/relativeLayout2"
+        android:layout_width="329dp"
+        android:layout_height="530dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
-        <Button
-            android:id="@+id/neweventbtn"
-            android:layout_width="160dp"
-            android:layout_height="191.6dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#F1DF66"
-            android:fontFamily="monospace"
-            android:text="Create Event"
-            android:textColor="#000"
-            android:textSize="19dp"
-            android:textStyle="bold">
+        <LinearLayout
+            android:id="@+id/createeventlayout"
+            android:layout_width="124dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+             android:orientation="vertical">
 
-        </Button>
+            <ImageButton
+                android:id="@+id/neweventbtn"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
 
-        <Button
-            android:id="@+id/eventsbtn"
-            android:layout_width="160dp"
-            android:layout_height="191.6dp"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#B7CADB"
-            android:fontFamily="monospace"
-            android:text="Events"
-            android:textColor="#000"
-            android:textSize="19dp"
-            android:textStyle="bold">
+                android:background="@drawable/createeventlogo" />
 
-        </Button>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-        <Button
-            android:id="@+id/AccountBtn"
-            android:layout_width="160dp"
-            android:layout_height="191.6dp"
-            android:layout_below="@id/neweventbtn"
-            android:layout_marginLeft="16dp"
-            android:backgroundTint="#B7CADB"
-            android:fontFamily="monospace"
-            android:text="Account"
-            android:textColor="#000"
-            android:textSize="17.5dp"
-            android:textStyle="bold">
 
-        </Button>
+                android:text="Create Event"
+                android:textAlignment="center"
+                android:textColor="#F15805"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/NavigateBtn"
-            android:layout_width="160dp"
-            android:layout_height="191.6dp"
-            android:layout_below="@id/eventsbtn"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="1dp"
-            android:backgroundTint="#F1DF66"
-            android:fontFamily="monospace"
-            android:text="NAVIGATE"
-            android:textColor="#000"
-            android:textSize="19dp"
-            android:textStyle="bold">
+        <LinearLayout
+            android:id="@+id/eventlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/createeventlayout"
 
-        </Button>
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/ThemeBtn"
-            android:layout_width="160dp"
-            android:layout_height="191.6dp"
-            android:layout_below="@id/AccountBtn"
-            android:layout_marginLeft="16dp"
-            android:backgroundTint="#F1DF66"
-            android:fontFamily="monospace"
-            android:text="APP THEME"
-            android:textColor="#000"
-            android:textSize="19dp"
-            android:textStyle="bold">
+            <ImageButton
+                android:id="@+id/eventsbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-        </Button>
+                android:background="@drawable/eventspic" />
 
-        <Button
-            android:id="@+id/LogoutBtn"
-            android:layout_width="160dp"
-            android:layout_height="191.6dp"
-            android:layout_below="@id/NavigateBtn"
-            android:layout_marginLeft="200dp"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventsbtn"
+                android:layout_alignParentStart="true"
+                android:text="Events"
+                android:textAlignment="center"
+                android:textColor="#F15805"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-            android:backgroundTint="#B7CADB"
-            android:fontFamily="monospace"
-            android:text="LOGOUT"
-            android:textColor="#000"
-            android:textSize="19dp"
-            android:textStyle="bold">
 
-        </Button>
+
+        <LinearLayout
+            android:id="@+id/attendencelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eventlayout"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/AttendenceBtn"
+                android:layout_width="122dp"
+                android:layout_height="122dp"
+
+                android:background="@drawable/attendencecapture" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AttendenceBtn"
+                android:layout_alignParentStart="true"
+                android:text="Attendence"
+                android:textAlignment="center"
+                android:textColor="#F15805"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/attendenceRlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attendencelayout"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/AttendenceRegister"
+                android:layout_width="120dp"
+                android:layout_height="102dp"
+
+                android:background="@drawable/attimg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/AttendenceBtn"
+                android:layout_alignParentStart="true"
+                android:text="Register"
+                android:textAlignment="center"
+                android:textColor="#F15805"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="124dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/eventlayout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="25dp"
+
+            android:layout_marginEnd="25dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/AccountBtn"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+
+                android:background="@drawable/myaccount" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventsbtn"
+
+                android:text="Account"
+                android:textAlignment="center"
+                android:textColor="#F15805"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginTop="14dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <ImageButton
+            android:gravity="center"
+            android:id="@+id/logoutBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/exitapp">
+
+        </ImageButton>
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

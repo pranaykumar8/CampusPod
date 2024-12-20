@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/backtocoordinateloginpage"
-            android:layout_width="76dp"
-            android:layout_height="40dp"
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
             app:srcCompat="@drawable/back" />
 
         <ImageView
@@ -42,92 +42,106 @@
             android:textStyle="bold">
 
         </TextView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="64dp"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+
+            android:visibility="invisible">
+
+        </ProgressBar>
+
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
 
-            <ProgressBar
-                android:id="@+id/progress_bar"
-                android:layout_width="64dp"
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="160dp"
+                app:boxStrokeColor="@color/black"
                 android:layout_marginTop="10dp"
-                android:paddingTop="10dp"
+                android:layout_marginBottom="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                android:visibility="invisible">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/CoordinatorName"
+                    android:layout_height="wrap_content"
+                    android:hint="FullName">
 
-            </ProgressBar>
-        </LinearLayout>
+                </com.google.android.material.textfield.TextInputEditText>
 
-        <LinearLayout
-            android:layout_width="298dp"
-            android:layout_height="399dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/CoordinatorName"
-                android:layout_width="300dp"
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
-                android:drawablePadding="10dp"
-                android:hint="Full Name"
-                android:inputType="text">
+                app:boxStrokeColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            </EditText>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/CoordinatorID"
+                    android:layout_height="wrap_content"
+                    android:hint="College ID">
 
-            <EditText
-                android:id="@+id/CoordinatorID"
-                android:layout_width="300dp"
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
-                android:drawablePadding="10dp"
-                android:hint="college id">
+                app:boxStrokeColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            </EditText>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/CoordinatorEmail"
+                    android:layout_height="wrap_content"
+                    android:hint="Email">
 
-            <EditText
-                android:id="@+id/CoordinatorEmail"
-                android:layout_width="300dp"
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:drawableLeft="@drawable/ic_baseline_email_24"
-                android:drawablePadding="10dp"
-                android:hint="email">
+                app:boxStrokeColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            </EditText>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/CoordinatorCreatePassword"
+                    android:layout_height="wrap_content"
+                    android:hint="Password">
 
-            <EditText
-                android:id="@+id/CoordinatorCreatePassword"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:drawableLeft="@drawable/ic_baseline_lock_24"
-                android:drawablePadding="10dp"
-                android:hint="create password"
-                android:inputType="textPassword">
+                </com.google.android.material.textfield.TextInputEditText>
 
-            </EditText>
-
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/RegisterCoordinator"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="25dp"
-                android:text="REGISTER"
-                android:textAlignment="center"
-                android:textSize="24dp">
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/white"
+                android:text="Register"
+                android:textColor="@color/mtrl_textinput_default_box_stroke_color">
 
             </Button>
 

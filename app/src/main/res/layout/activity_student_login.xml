@@ -56,31 +56,46 @@
             android:layout_margin="10dp"
             android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/usernametxt"
-                android:layout_width="300dp"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:drawableLeft="@drawable/ic_baseline_person_24"
-                android:drawablePadding="10dp"
-                android:hint="CollegeId">
+                app:boxStrokeColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            </EditText>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/usernametxt"
+                    android:layout_height="wrap_content"
+                    android:hint="Email">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-            <EditText
-                android:id="@+id/passwordtxt"
-                android:layout_width="300dp"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:drawableLeft="@drawable/ic_baseline_lock_24"
-                android:drawablePadding="10dp"
-                android:hint="Password"
-                android:inputType="textPassword">
+                app:boxStrokeColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:passwordToggleEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            </EditText>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/passwordtxt"
+                    android:layout_height="wrap_content"
+                    android:ems="15"
+                    android:hint="Password">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/forgotpassword"
@@ -103,8 +118,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:text="LOGIN"
+
                 android:textAlignment="center"
                 android:textSize="24dp">
 
@@ -135,8 +151,8 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-            android:layout_width="313dp"
-            android:layout_height="114dp"
+            android:layout_width="279dp"
+            android:layout_height="119dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
@@ -147,6 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="5dp"
                 android:padding="3sp"
                 android:text="new User?"
                 android:textAlignment="center"
@@ -160,6 +177,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="Register"
                 android:textAlignment="center"

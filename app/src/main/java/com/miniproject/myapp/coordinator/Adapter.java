@@ -1,6 +1,7 @@
 package com.miniproject.myapp.coordinator;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,6 +90,7 @@ public class Adapter extends FirebaseRecyclerAdapter<EventData,Adapter.MyViewhol
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
+
                                         Toast.makeText(holder.Etitle.getContext(), "Data Upadated Successfully", Toast.LENGTH_SHORT).show();
                                         dialogPlus.dismiss();
                                     }
@@ -101,6 +103,7 @@ public class Adapter extends FirebaseRecyclerAdapter<EventData,Adapter.MyViewhol
 
                                     }
                                 });
+
 
                     }
                 });

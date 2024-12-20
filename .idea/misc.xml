@@ -4,22 +4,37 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/MyApp/app/src/main/res/drawable/account_img.xml" value="0.1665" />
+        <entry key="..\:/MyApp/app/src/main/res/drawable/bordered.xml" value="0.2115" />
+        <entry key="..\:/MyApp/app/src/main/res/drawable/profile.xml" value="0.1" />
+        <entry key="..\:/MyApp/app/src/main/res/drawable/rounded.xml" value="0.1" />
         <entry key="..\:/MyApp/app/src/main/res/layout/activity_ask_user.xml" value="0.1859375" />
-        <entry key="..\:/MyApp/app/src/main/res/layout/activity_coordinator_dashboard.xml" value="0.2" />
-        <entry key="..\:/MyApp/app/src/main/res/layout/activity_coordinator_login.xml" value="0.2" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_attendence.xml" value="0.16" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_attendence_display.xml" value="0.20416666666666666" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_coordinator_dashboard.xml" value="0.1" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_coordinator_dashboard_account.xml" value="0.2" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_coordinator_forgot_password.xml" value="0.20416666666666666" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_coordinator_login.xml" value="0.22" />
         <entry key="..\:/MyApp/app/src/main/res/layout/activity_coordinator_registration.xml" value="0.2" />
         <entry key="..\:/MyApp/app/src/main/res/layout/activity_create_event_page.xml" value="0.2" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_directions.xml" value="0.25" />
         <entry key="..\:/MyApp/app/src/main/res/layout/activity_event_view_page.xml" value="0.2" />
         <entry key="..\:/MyApp/app/src/main/res/layout/activity_events_page.xml" value="0.2" />
         <entry key="..\:/MyApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_maps.xml" value="0.16" />
         <entry key="..\:/MyApp/app/src/main/res/layout/activity_notification_page.xml" value="0.2" />
-        <entry key="..\:/MyApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
-        <entry key="..\:/MyApp/app/src/main/res/layout/activity_student_dashboard.xml" value="0.2" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.19101123595505617" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_student_dashboard.xml" value="0.18" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_student_dashboard_account.xml" value="0.25" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_student_forgot_password.xml" value="0.20416666666666666" />
         <entry key="..\:/MyApp/app/src/main/res/layout/activity_student_login.xml" value="0.2" />
-        <entry key="..\:/MyApp/app/src/main/res/layout/activity_student_registration.xml" value="0.2" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/activity_student_registration.xml" value="0.1" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/attencendeviewitem.xml" value="0.25" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/bordered.xml" value="0.1" />
         <entry key="..\:/MyApp/app/src/main/res/layout/eventitem.xml" value="0.2" />
-        <entry key="..\:/MyApp/app/src/main/res/layout/notificationview.xml" value="0.2" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/eventviewitem.xml" value="0.20364583333333333" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/notificationview.xml" value="0.25" />
         <entry key="..\:/MyApp/app/src/main/res/layout/updateeventdata.xml" value="0.23357664233576642" />
+        <entry key="..\:/MyApp/app/src/main/res/layout/updatestudentdetails.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

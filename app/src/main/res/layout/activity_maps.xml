@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Navigation.MapsActivity">
+
+    <!--fragment to display our maps-->
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="413dp"
+        android:layout_height="787dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/currentlocation"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+
+        android:background="@drawable/location"
+
+        android:backgroundTintMode="multiply"
+
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037">
+
+    </ImageButton>
+
+
+    <Button
+
+        android:id="@+id/getVenue"
+        android:layout_width="180dp"
+        android:layout_height="57dp"
+        android:backgroundTint="@color/white"
+        android:text="Venue"
+
+
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+
+    <Button
+
+        android:id="@+id/getCurrentLoc"
+        android:layout_width="208dp"
+        android:layout_height="57dp"
+        android:backgroundTint="@color/white"
+        android:text="My Location"
+
+
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map">
+
+    </Button>
+
+    <ImageButton
+        android:id="@+id/zoomIn"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="92dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/zoomOut"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zoomIn" />
+
+    <!--    <androidx.cardview.widget.CardView-->
+
+<!--        android:id="@+id/cardView"-->
+<!--        android:layout_width="match_parent"-->
+
+<!--        android:layout_height="50sp"-->
+<!--        android:backgroundTint="@color/grey">-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/back2events"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:backgroundTint="@color/grey"-->
+<!--            android:src="@drawable/back">-->
+
+<!--        </ImageButton>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="303dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:text="Location"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/teal_700"-->
+<!--            android:textSize="32sp"-->
+
+<!--            android:textStyle="bold">-->
+
+<!--        </TextView>-->
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

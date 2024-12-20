@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyApp</string>
+    <string name="app_name">Campus Pod</string>
     <string name="student">I\'m a Student</string>
     <string name="coordinator">I\'m a event coordinator</string>
     <string name="title_activity_student_login">StudentLoginActivity</string>
@@ -13,4 +13,5 @@
     <string name="login_failed">"Login failed"</string>
 
     <string name="api_key">AIzaSyA5WuXpnyMo0QV39V84HbveWxU2XkQBwgM</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

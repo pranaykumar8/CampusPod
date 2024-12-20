@@ -3,8 +3,11 @@ package com.miniproject.myapp.student;
 
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,9 +16,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,8 +30,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.miniproject.myapp.AskUserActivity;
 import com.miniproject.myapp.R;
 
+import org.checkerframework.checker.units.qual.A;
 
-public class StudentLogin extends AppCompatActivity {
+
+public class StudentLogin extends AppCompatActivity{
     private DatabaseReference databaseReference;
     private FirebaseUser users;
     private String userID;
@@ -34,6 +42,7 @@ public class StudentLogin extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
     private ImageView backtouseractivity;
+    private TextView forgotpassword;
 
 
     @Override
@@ -55,6 +64,7 @@ public class StudentLogin extends AppCompatActivity {
         userlogin = findViewById(R.id.login);
         mAuth=FirebaseAuth.getInstance();
         progressBar=findViewById(R.id.progress_bar);
+        forgotpassword = findViewById(R.id.forgotpassword);
         newregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +79,17 @@ public class StudentLogin extends AppCompatActivity {
                 login();
             }
         });
+
+        forgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),StudentForgotPassword.class));
+                finish();
+            }
+        });
     }
+
+
 
     private void login() {
         String Email= loginusername.getText().toString().trim();

@@ -3,6 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.miniproject.myapp">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +23,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp"
         tools:targetApi="31">
+        <activity
+            android:name=".coordinator.CoordinatorForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".student.StudentForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".coordinator.CoordinatorDashboardAccount"
+            android:exported="false" />
+        <activity
+            android:name=".student.StudentDashboardAccount"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBO1lTXr1JJ9aFqiUJ24JN5uQG7x3gpsk4" />
+
+        <activity
+            android:name=".Navigation.Directions"
+            android:exported="false" />
+        <activity
+            android:name=".Navigation.MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".attendence.AttendenceDisplay"
+            android:exported="false" />
+        <activity
+            android:name=".attendence.BarcodeScanner"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true" />
+        <activity
+            android:name=".attendence.Attendence"
+            android:exported="false" />
         <activity
             android:name=".coordinator.EventsPage"
             android:exported="false" />
@@ -51,7 +95,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

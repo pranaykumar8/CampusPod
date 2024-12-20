@@ -2,6 +2,7 @@ package com.miniproject.myapp.coordinator;
 
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -10,8 +11,11 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -21,21 +25,28 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 
-
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.miniproject.myapp.R;
+import com.miniproject.myapp.user;
 
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
-
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class CreateEventPage extends AppCompatActivity {
     EditText eventname,eventdate,eventtime,eventvenue;
     int PLACE_PICKER_REQUEST=1;
+    FirebaseFirestore db;
     private static final String CHANNEL_ID="CampusDrive";
     private static final  int NOTIFICATION_ID=100;
 
@@ -64,6 +75,7 @@ public class CreateEventPage extends AppCompatActivity {
             }
         });
         eventvenue = (EditText) findViewById(R.id.EventvenueET);
+        db= FirebaseFirestore.getInstance();
 
         Button add = (Button) findViewById(R.id.ADD);
         add.setOnClickListener(new View.OnClickListener() {
@@ -74,9 +86,11 @@ public class CreateEventPage extends AppCompatActivity {
                 String date = eventdate.getText().toString();
                 String time = eventtime.getText().toString();
                 String venue = eventvenue.getText().toString();
+
                 EventData ed = new EventData(name,date,time,venue);
                 databaseReference.push().setValue(ed);
                 Toast.makeText(CreateEventPage.this, "Event added successully", Toast.LENGTH_LONG).show();
+
 
                 DatabaseReference databaseReference2 = FirebaseDatabase.getInstance().getReference().child("Notificationevents");
                 String nname = eventname.getText().toString();
@@ -85,6 +99,28 @@ public class CreateEventPage extends AppCompatActivity {
                 String nvenue = eventvenue.getText().toString();
                 EventData ned = new EventData(nname,ndate,ntime,nvenue);
                 databaseReference2.push().setValue(ned);
+
+//                Map<String, Object> event= new HashMap<>();
+//                event.put("EventName",eventname.getText().toString());
+//                event.put("EventDate", eventdate.getText().toString());
+//                event.put("EventTime", eventtime.getText().toString());
+//                event.put("EventVenue",eventvenue.getText().toString());
+//                db.collection("Events")
+//                        .add(event)
+//                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+//                            @Override
+//                            public void onSuccess(DocumentReference documentReference) {
+//                                Toast.makeText(CreateEventPage.this, "data inserted successfully", Toast.LENGTH_SHORT).show();
+//                            }
+//                        })
+//                        .addOnFailureListener(new OnFailureListener() {
+//                            @Override
+//                            public void onFailure(@NonNull Exception e) {
+//                                Toast.makeText(CreateEventPage.this, "data inserted failed", Toast.LENGTH_SHORT).show();
+//                            }
+//                        });
+
+
 
                 NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
                 Notification notification;

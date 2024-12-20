@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -29,6 +30,7 @@ public class CoordinatorLogin extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private FirebaseUser users;
     private String userID;
+    TextView Cforgotpassword;
     private Button Clogin, Cregister;
     private EditText coordinateuser, coordinatepassword;
     private FirebaseAuth mAuth;
@@ -49,8 +51,8 @@ public class CoordinatorLogin extends AppCompatActivity {
                 startActivity(new Intent(CoordinatorLogin.this, AskUserActivity.class));
             }
         });
-        coordinateuser = findViewById(R.id.usernametxt);
-        coordinatepassword = findViewById(R.id.passwordtxt);
+        coordinateuser = findViewById(R.id.Cusernametxt);
+        coordinatepassword = findViewById(R.id.Cpasswordtxt);
         Clogin = findViewById(R.id.Clogin);
         mAuth=FirebaseAuth.getInstance();
         progressBar=findViewById(R.id.progress_bar);
@@ -66,6 +68,14 @@ public class CoordinatorLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 login();
+            }
+        });
+        Cforgotpassword = findViewById(R.id.Cforgotpassword);
+        Cforgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),CoordinatorForgotPassword.class));
+                finish();
             }
         });
     }
